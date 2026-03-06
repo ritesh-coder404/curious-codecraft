@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
@@ -11,6 +11,27 @@ const links = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(`#${entry.target.id}`);
+          }
+        });
+      },
+      { rootMargin: "-40% 0px -55% 0px" }
+    );
+
+    links.forEach((link) => {
+      const el = document.querySelector(link.href);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
@@ -24,7 +45,11 @@ const Navbar = () => {
             <a
               key={l.label}
               href={l.href}
-              className="font-display text-xs tracking-widest uppercase text-muted-foreground hover:text-primary transition-colors"
+              className={`font-display text-xs tracking-widest uppercase transition-colors ${
+                activeSection === l.href
+                  ? "text-primary text-glow"
+                  : "text-muted-foreground hover:text-primary"
+              }`}
             >
               {l.label}
             </a>
@@ -53,7 +78,11 @@ const Navbar = () => {
                   key={l.label}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="block font-display text-sm tracking-widest uppercase text-muted-foreground hover:text-primary transition-colors"
+                  className={`block font-display text-sm tracking-widest uppercase transition-colors ${
+                    activeSection === l.href
+                      ? "text-primary text-glow"
+                      : "text-muted-foreground hover:text-primary"
+                  }`}
                 >
                   {l.label}
                 </a>
