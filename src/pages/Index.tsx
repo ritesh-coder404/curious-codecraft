@@ -19,6 +19,7 @@ const Index = () => {
       <ContentSection />
       <ContactSection />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };
