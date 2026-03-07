@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Youtube, Github, Linkedin, Send } from "lucide-react";
+import { Mail, Youtube, Github, Linkedin, Send, Phone } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -7,10 +7,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
 const socials = [
-  { icon: Youtube, label: "YouTube", href: "https://youtube.com/@ritesh", color: "hover:text-red-500" },
-  { icon: Github, label: "GitHub", href: "https://github.com/ritesh", color: "hover:text-foreground" },
-  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/ritesh", color: "hover:text-blue-400" },
-  { icon: Mail, label: "Email", href: "mailto:ritesh@example.com", color: "hover:text-primary" },
+  { icon: Youtube, label: "YouTube", href: "https://youtube.com/@syntaxspark", color: "hover:text-red-500" },
+  { icon: Github, label: "GitHub", href: "https://github.com/ritesh-coder404", color: "hover:text-foreground" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/riteshthakur-83a862381", color: "hover:text-blue-400" },
+  { icon: Mail, label: "Email", href: "mailto:ritesh74599@gmail.com", color: "hover:text-primary" },
+  { icon: Phone, label: "WhatsApp", href: "https://wa.me/919517184947", color: "hover:text-green-500" },
 ];
 
 const ContactSection = () => {
