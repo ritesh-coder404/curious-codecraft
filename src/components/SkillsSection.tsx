@@ -4,13 +4,13 @@ const skillCategories = [
   {
     title: "Languages",
     skills: [
-      { name: "HTML", level: 90 },
-      { name: "CSS", level: 85 },
-      { name: "JavaScript", level: 75 },
-      { name: "C", level: 65 },
-      { name: "C++", level: 60 },
-      { name: "Java", level: 55 },
-      { name: "SQL", level: 70 },
+      { name: "HTML", level: 95 },
+      { name: "CSS", level: 90 },
+      { name: "JavaScript", level: 80 },
+      { name: "C", level: 70 },
+      { name: "C++", level: 65 },
+      { name: "Java", level: 60 },
+      { name: "SQL", level: 75 },
     ],
   },
   {
