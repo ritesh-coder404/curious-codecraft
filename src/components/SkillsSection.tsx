@@ -16,10 +16,10 @@ const skillCategories = [
   {
     title: "Frameworks & Libraries",
     skills: [
-      { name: "React", level: 60 },
-      { name: "Bootstrap", level: 80 },
-      { name: "Express.js", level: 50 },
-      { name: "Tailwind CSS", level: 85 },
+      { name: "React", level: 65 },
+      { name: "Bootstrap", level: 85 },
+      { name: "Express.js", level: 55 },
+      { name: "Tailwind CSS", level: 90 },
     ],
   },
   {
