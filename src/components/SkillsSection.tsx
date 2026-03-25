@@ -25,10 +25,10 @@ const skillCategories = [
   {
     title: "Backend & Tools",
     skills: [
-      { name: "MongoDB", level: 55 },
-      { name: "API Integration", level: 65 },
-      { name: "Responsive Design", level: 88 },
-      { name: "Git & GitHub", level: 70 },
+      { name: "MongoDB", level: 60 },
+      { name: "API Integration", level: 70 },
+      { name: "Responsive Design", level: 90 },
+      { name: "Git & GitHub", level: 75 },
     ],
   },
 ];
